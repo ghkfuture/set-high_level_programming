@@ -1,21 +1,28 @@
-==================================
+===================================
 How to Use 5-text_indentation.py
-==================================
+===================================
 
-Importing:
+Importing function:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Normal usage:
-    >>> text_indentation("Hello. World? Fine:")
+Usage
+-----
+    >>> text_indentation("Hello. How are you?")
     Hello.
     <BLANKLINE>
-    World?
-    <BLANKLINE>
-    Fine:
+    How are you?
     <BLANKLINE>
 
-Error:
-    >>> text_indentation(123)
+Type Errors
+-----------
+    >>> text_indentation(12)
     Traceback (most recent call last):
         ...
     TypeError: text must be a string
+
+Missing Arguments
+-----------------
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'

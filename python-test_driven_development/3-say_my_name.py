@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""Module that defines a name printing function."""
+"""
+Module for say_my_name function.
+"""
 
 
 def say_my_name(first_name, last_name=""):
-    """Prints 'My name is <first name> <last name>'.
+    """Prints 'My name is <first name> <last name>'
 
     Args:
-        first_name: String representing first name.
-        last_name: String representing last name (default "").
+        first_name: First name string.
+        last_name: Last name string (optional).
 
     Raises:
         TypeError: If first_name or last_name are not strings.
