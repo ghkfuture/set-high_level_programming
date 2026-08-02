@@ -4,6 +4,8 @@ Defines Base class for geometry project models.
 """
 import json
 import csv
+import turtle
+import random
 
 
 class Base:
@@ -97,3 +99,51 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws all Rectangles and Squares using Turtle graphics."""
+        screen = turtle.Screen()
+        screen.title("Python - Almost a Circle: Drawing Rectangles & Squares")
+        screen.bgcolor("#1e1e2e")
+
+        t = turtle.Turtle()
+        t.pensize(3)
+        t.speed(3)
+        t.hideturtle()
+
+        colors = ["#f38ba8", "#89b4fa", "#a6e3a1", "#f9e2af", "#cba6f7", "#fab387"]
+
+        # Helper to draw shapes
+        def draw_shape(shape, is_square=False):
+            t.penup()
+            # Offsetting canvas to top-left quadrant style mapping
+            start_x = -350 + shape.x
+            start_y = 250 - shape.y
+            t.goto(start_x, start_y)
+            t.pendown()
+
+            color = random.choice(colors)
+            t.color(color)
+            t.fillcolor(color)
+
+            w = shape.width if not is_square else shape.size
+            h = shape.height if not is_square else shape.size
+
+            t.begin_fill()
+            for _ in range(2):
+                t.forward(w)
+                t.right(90)
+                t.forward(h)
+                t.right(90)
+            t.end_fill()
+
+        if list_rectangles:
+            for rect in list_rectangles:
+                draw_shape(rect, is_square=False)
+
+        if list_squares:
+            for sq in list_squares:
+                draw_shape(sq, is_square=True)
+
+        turtle.exitonclick()
