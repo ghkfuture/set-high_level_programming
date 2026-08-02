@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Unittests for Rectangle class in models/rectangle.py
-"""
+"""Unittests for Rectangle class."""
 import unittest
 import os
 from models.base import Base

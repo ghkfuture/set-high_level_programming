@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""
-Unittests for Base class in models/base.py
-"""
+"""Unittests for Base class."""
 import unittest
 import os
-import json
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square

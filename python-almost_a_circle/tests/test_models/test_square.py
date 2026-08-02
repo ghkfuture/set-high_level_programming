@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Unittests for Square class in models/square.py
-"""
+"""Unittests for Square class."""
 import unittest
 import os
 from models.base import Base
