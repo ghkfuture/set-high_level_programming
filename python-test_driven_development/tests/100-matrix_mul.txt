@@ -1,0 +1,23 @@
+============================
+How to Use 100-matrix_mul.py
+============================
+
+Importing:
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Normal usage:
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+    >>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+    [[13, 16]]
+
+Errors:
+    >>> matrix_mul("not list", [[1, 2]])
+    Traceback (most recent call last):
+        ...
+    TypeError: m_a must be a list
+
+    >>> matrix_mul([[]], [[1, 2]])
+    Traceback (most recent call last):
+        ...
+    ValueError: m_a can't be empty
