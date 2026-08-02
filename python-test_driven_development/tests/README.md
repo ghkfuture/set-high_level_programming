@@ -1,1 +1,1 @@
-# Tests directory for Python TDD project
+# Tests directory
